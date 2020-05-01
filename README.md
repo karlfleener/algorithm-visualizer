@@ -2,6 +2,10 @@
 
 Always wanted a clearer understanding of how algorithms work under the hood? This application gives a high-level overview for users to visualize and compare various algorithms.
 
+Demo
+
+https://karlfleener.github.io/algorithm-visualizer/
+
 ## Functionality and MVP
 
 * Users can choose from a selection of sorting algorithms to visualize
