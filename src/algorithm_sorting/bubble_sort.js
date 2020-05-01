@@ -1,4 +1,4 @@
-function bubbleSort(arr) {
+export function bubbleSort(arr) {
   let swapped = true;
 
   while(swapped) {
@@ -19,4 +19,6 @@ function swap(arr, idx1, idx2) {
   arr[idx1] = arr[idx2];
   arr[idx2] = temp;
 }
+
+export default bubbleSort;
 

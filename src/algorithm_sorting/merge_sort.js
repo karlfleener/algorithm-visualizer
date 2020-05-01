@@ -1,4 +1,4 @@
-function mergeSort(arr) {
+export function mergeSort(arr) {
   if (arr.length <= 1) return arr;
 
   let midIdx = Math.floor(arr.length / 2);
@@ -31,3 +31,5 @@ function merge(arr1, arr2) {
 
   return merged;
 }
+
+export default mergeSort;

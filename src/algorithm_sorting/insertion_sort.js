@@ -1,4 +1,4 @@
-function insertionSort(arr) {
+export function insertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     let currElement = arr[i];
     for (var j = i - 1; j >= 0 && currElement < arr[j]; j--) {
@@ -8,3 +8,5 @@ function insertionSort(arr) {
   }
   return arr;
 }
+
+export default insertionSort;

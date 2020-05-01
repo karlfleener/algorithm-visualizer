@@ -1,4 +1,4 @@
-function selectionSort(arr) {
+export function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let minIdx = i;
 
@@ -17,3 +17,5 @@ function swap(arr, idx1, idx2) {
   arr[idx1] = arr[idx2];
   arr[idx2] = temp;
 }
+
+export default selectionSort;
