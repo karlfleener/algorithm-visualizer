@@ -212,7 +212,7 @@ class SortingVisualizer {
   };
 
   resizeArray() {
-    
+
   }
   
   shuffleArray() {
@@ -236,17 +236,23 @@ class SortingVisualizer {
       this.ctx.fillRect(i * widthRatio,  this.canvas.height - barHeight, widthRatio, barHeight)
       debugger
     }
+    // this.ctx.save();
+  }
+
+  randomNum() {
+    
   }
 
   gradient(val) {
     let index = this.array.indexOf(val)
     debugger
-    // const colorStart = (Math.floor(Math.random() * 360));
+
     let colorNext = (this.colorStart + (index * (70 / this.size))) % 360;
     return "hsl(" + colorNext + ",90%,50%)";
   }
 
   init() {
+    this.colorStart = Math.floor(Math.random() * 360);
     this.buildArray();
     this.shuffleArray();
     this.drawCanvas();
@@ -296,7 +302,5 @@ document.getElementById('sort').onclick = e => {
 }
 
 document.getElementById('reset').onclick = e => {
-  visualizer.buildArray();
-  visualizer.shuffleArray();
-  visualizer.drawCanvas();
+  visualizer.init();
 }
