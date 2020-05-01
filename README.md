@@ -1,3 +1,6 @@
+Demo
+https://karlfleener.github.io/algorithm-visualizer/
+
 ## Overview
 
 Always wanted a clearer understanding of how algorithms work under the hood? This application gives a high-level overview for users to visualize and compare various algorithms.
