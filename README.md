@@ -20,7 +20,7 @@ https://karlfleener.github.io/algorithm-visualizer/
 ## Architecture and Technologies
 
 * JavaScript for algorithm logic
-* D3 for graphs
+* Canvas for graphs and animation
 * Browserify to bundle js files
 
 In addition to the entry file, there will be scripts for each algorithm involved in the this project.
@@ -31,12 +31,12 @@ Day 1 - Setup all necessary Node modules and getting webpack up and running. Cre
 
 Day 2 - Finish algorithm logic and implement styling/animation logic. Begin adding functionality for # of elements and speed sliding scales.
 
-Day 3 - Learn D3 and finish adding animations.
+Day 3 - Learn Canvas and finish adding animations.
 
-Day 4 - Style the frontend,, making it polished and professional.
+Day 4 - Style the frontend, making it polished and professional.
 
 Day 5 - 
 
 ## Bonus
 * Add pathfinding algorithms
-* Add various animations to sorting
+* Increase amount of displays to visualize
