@@ -1,6 +1,12 @@
 ## Overview
 
-Always wanted a clearer understanding of how algorithms work under the hood? This application gives a high-level overview for users to visualize and compare various algorithms.
+Always wanted a clearer understanding of how algorithms work under the hood? This application gives a high-level overview for users to visualize and compare various algorithms. 
+
+## Instructions 
+
+Select the type of algorithm from the dropdown menu, set the size of the graph and speed
+to visualize. Once all the these are set click sort and watch the algorithm come to life. 
+Click Reset to randomize the graph.
 
 Demo
 
@@ -37,6 +43,6 @@ Day 4 - Style the frontend, making it polished and professional.
 
 Day 5 - 
 
-## Bonus
+## Bonus/Future
 * Add pathfinding algorithms
 * Increase amount of displays to visualize
