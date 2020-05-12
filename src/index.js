@@ -15,7 +15,7 @@ class SortingVisualizer {
 
     this.algorithmType = document.getElementById('algorithm-type').value;
     this.algorithmInput = document.getElementById('algorithm').value;
-    this.speed = Number(document.getElementById('speed').value);
+    
   }
   
   clearCanvas() {
@@ -25,20 +25,11 @@ class SortingVisualizer {
   buildArray() {
     this.size = Number(document.getElementById("size").value);
 
-    debugger
     this.array = []
     for (let i = 1; i <= this.size; i++) {
       this.array.push(i);
     }
   };
-
-  // resizeArray() {
-  //   let sizeInput = document.getElementById("size");
-  //   // this.size = Number(document.getElementById("size").value);
-
-  //   sizeInput.addEventListener("change", this.buildArray(),false)
-  //   debugger
-  // }
   
   shuffleArray() {
     for (let i = this.size - 1; i > 0; i--) {
@@ -48,7 +39,6 @@ class SortingVisualizer {
   }
   
   drawCanvas() {
-    debugger
     let widthRatio = this.canvas.width / this.size;
     let heightRatio = this.canvas.height / this.size;
 
@@ -59,18 +49,12 @@ class SortingVisualizer {
       let barHeight = val * heightRatio;
       this.ctx.fillStyle = this.gradient(val);
       this.ctx.fillRect(i * widthRatio,  this.canvas.height - barHeight, widthRatio, barHeight)
-      debugger
+      this.ctx.save();
     }
-    // this.ctx.save();
-  }
-
-  randomNum() {
-    
   }
 
   gradient(val) {
     let index = this.array.indexOf(val)
-    debugger
 
     let colorNext = (this.colorStart + (index * (70 / this.size))) % 360;
     return "hsl(" + colorNext + ",90%,50%)";
@@ -90,15 +74,18 @@ class SortingVisualizer {
   }
   
   sort() {
-    debugger
     let sortArray = this.bubbleSort(this.array);
-    // an anim function triggered every 60th of a second
+
     const animate = () => {
-      requestAnimationFrame(animate);
-      debugger
+      
+      let speed = Math.floor(1000 / Number(document.getElementById("speed").value))
+        setTimeout(function() { 
+        requestAnimationFrame(animate); 
+      }, speed);
+      
       this.drawCanvas();
       sortArray.next(); // call next iteration of the bubbleSort function
-    }
+    };
     animate();
   }
   
@@ -124,6 +111,8 @@ class SortingVisualizer {
   }
   
 }
+
+//----------------------------------Run Program---------------------------------
 
 let visualizer = new SortingVisualizer
 visualizer.init()
