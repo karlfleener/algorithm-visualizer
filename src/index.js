@@ -167,47 +167,47 @@ class SortingVisualizer {
 
   //------------------------------------------------------------------------------
 
-    *mergeSort(arr) {
-    if (arr.length <= 1) return arr;
+  //   *mergeSort(arr) {
+  //   if (arr.length <= 1) return arr;
 
 
-    let midIdx = Math.floor(arr.length / 2);
-    let left = arr.slice(0, midIdx);
-    let right = arr.slice(midIdx);
+  //   let midIdx = Math.floor(arr.length / 2);
+  //   let left = arr.slice(0, midIdx);
+  //   let right = arr.slice(midIdx);
 
 
-    let sortedLeft = this.mergeSort(left);
-    let sortedRight = this.mergeSort(right);
+  //   let sortedLeft = this.mergeSort(left);
+  //   let sortedRight = this.mergeSort(right);
 
 
 
-    function *merge(sortedLeft, sortedRight) {
+  //   function *merge(sortedLeft, sortedRight) {
 
-      // console.log(arr)
+  //     // console.log(arr)
 
-      arr = [];
+  //     arr = [];
 
-      while (sortedLeft.length || sortedRight.length) {
-        let ele1 = sortedLeft.length ? sortedLeft[0] : Infinity;
-        let ele2 = sortedRight.length ? sortedRight[0] : Infinity;
+  //     while (sortedLeft.length || sortedRight.length) {
+  //       let ele1 = sortedLeft.length ? sortedLeft[0] : Infinity;
+  //       let ele2 = sortedRight.length ? sortedRight[0] : Infinity;
 
-        let next;
-        if (ele1 < ele2) {
-          next = sortedLeft.shift();
-        } else {
-          next = sortedRight.shift();
-        }
+  //       let next;
+  //       if (ele1 < ele2) {
+  //         next = sortedLeft.shift();
+  //       } else {
+  //         next = sortedRight.shift();
+  //       }
 
-        arr.push(next);
-      }
+  //       arr.push(next);
+  //     }
 
-      console.log(arr)
-      yield* arr;
-    }
-    // console.log(arr);
+  //     console.log(arr)
+  //     yield* arr;
+  //   }
+  //   // console.log(arr);
 
-    yield* merge(sortedLeft, sortedRight);
-  }
+  //   yield* merge(sortedLeft, sortedRight);
+  // }
 
   // merge(arr1, arr2) {
   //   let merged = [];
