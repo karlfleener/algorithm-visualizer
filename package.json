@@ -4,6 +4,7 @@
   "description": "",
   "main": "postcss.config.js",
   "dependencies": {
+    "mergesort-with-generators": "^1.0.5",
     "regenerator-runtime": "^0.13.5"
   },
   "devDependencies": {
