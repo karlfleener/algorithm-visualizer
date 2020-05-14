@@ -17,8 +17,8 @@ class SortingVisualizer {
   }
 
   buildArray() {
-    this.size = Number(document.getElementById("size").value);
-   
+    this.size = Number(sessionStorage.getItem("size"));
+   debugger
     this.array = [];
     for (let i = 1; i <= this.size; i++) {
       this.array.push(i);
