@@ -17,8 +17,12 @@ class SortingVisualizer {
   }
 
   buildArray() {
-    this.size = Number(sessionStorage.getItem("size"));
-   debugger
+    
+    sessionStorage.getItem("size") ? 
+    this.size = Number(sessionStorage.getItem("size")) :
+    this.size = 42;
+
+    debugger;
     this.array = [];
     for (let i = 1; i <= this.size; i++) {
       this.array.push(i);
@@ -97,9 +101,9 @@ class SortingVisualizer {
   }
 
   sort() {
+    
     let sortArray = this.algorithm();
     if (sortArray === undefined) return;
-
     const animate = () => {
       let speed = Math.floor(1000 / Number(document.getElementById("speed").value));
 
@@ -232,15 +236,8 @@ document.getElementById('sort').onclick = e => {
 }
 
 document.getElementById('reset').onclick = e => {
-  // visualizer.init();
-  e.preventDefault();
   location.reload();
 }
-
-let sizeInput = document.getElementById("size")
-sizeInput.addEventListener("input", function() {
-  visualizer.resize();
-});
 
 document.getElementById("algorithm").onchange = function () {
   sessionStorage.setItem("algorithm", document.getElementById("algorithm").value);
@@ -250,17 +247,16 @@ if (sessionStorage.getItem("algorithm")) {
   document.getElementById("algorithm").options[sessionStorage.getItem("algorithm")].selected = true;
 }
 
-document.getElementById("size").oninput = function () {
-  debugger
+document.getElementById("size").oninput = () => {
   sessionStorage.setItem("size", document.getElementById("size").value);
+  visualizer.resize();
 };
 
 if (sessionStorage.getItem("size")) {
-  debugger
   document.getElementById("size").value = sessionStorage.getItem("size");
-}
+} 
 
-document.getElementById("speed").oninput = function () {
+document.getElementById("speed").oninput = () => {
   sessionStorage.setItem("speed", document.getElementById("speed").value);
 };
 
