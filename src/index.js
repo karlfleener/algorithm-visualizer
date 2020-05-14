@@ -22,7 +22,6 @@ class SortingVisualizer {
     this.size = Number(sessionStorage.getItem("size")) :
     this.size = 42;
 
-    debugger;
     this.array = [];
     for (let i = 1; i <= this.size; i++) {
       this.array.push(i);
