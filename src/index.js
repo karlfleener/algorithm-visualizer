@@ -113,7 +113,7 @@ class SortingVisualizer {
         return;
       } else {
         setTimeout(animate, speed);
-        // debugger
+
         // console.log(this.array);
         sortArray.next();
       }
@@ -175,16 +175,16 @@ class SortingVisualizer {
     let left = arr.slice(0, midIdx);
     let right = arr.slice(midIdx);
 
-    debugger
+
     let sortedLeft = this.mergeSort(left);
     let sortedRight = this.mergeSort(right);
 
-    debugger
+
 
     function *merge(sortedLeft, sortedRight) {
 
       // console.log(arr)
-      debugger
+
       arr = [];
 
       while (sortedLeft.length || sortedRight.length) {
@@ -200,12 +200,12 @@ class SortingVisualizer {
 
         arr.push(next);
       }
-      debugger
+
       console.log(arr)
       yield* arr;
     }
     // console.log(arr);
-    debugger
+
     yield* merge(sortedLeft, sortedRight);
   }
 
@@ -215,14 +215,14 @@ class SortingVisualizer {
   //   while (arr1.length || arr2.length) {
   //     let ele1 = arr1.length ? arr1[0] : Infinity;
   //     let ele2 = arr2.length ? arr2[0] : Infinity;
-  //     debugger
+
   //     let next;
   //     if (ele1 < ele2) {
   //       next = arr1.shift();
   //     } else {
   //       next = arr2.shift();
   //     }
-  //     debugger
+
   //     merged.push(next);
   //     // yield* merged
   //   }
