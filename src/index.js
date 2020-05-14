@@ -18,7 +18,7 @@ class SortingVisualizer {
 
   buildArray() {
     this.size = Number(document.getElementById("size").value);
-
+   
     this.array = [];
     for (let i = 1; i <= this.size; i++) {
       this.array.push(i);
@@ -73,18 +73,18 @@ class SortingVisualizer {
   }
 
   algorithm() {
-    let algorithmInput = document.getElementById("algorithm").value;
-
-    if (algorithmInput === "Bubble Sort") {
+    let algorithmVal = document.getElementById("algorithm").value;
+    
+    if (algorithmVal === "0") return;
+    if (algorithmVal === "1") {
       return this.bubbleSort(this.array);
     }
-    if (algorithmInput === "Merge Sort") {
+    if (algorithmVal === "Merge Sort") {
       return this.mergeSort(this.array, 0, this.array.size);
     }
-    if (algorithmInput === "Quick Sort") {
+    if (algorithmVal === "2") {
       return this.quickSort(this.array, 0, this.array.size);
     }
-    if (algorithmInput === "") return;
   }
 
   isSorted(arr) {
@@ -101,11 +101,7 @@ class SortingVisualizer {
     if (sortArray === undefined) return;
 
     const animate = () => {
-      let speed = Math.floor(
-        1000 / Number(document.getElementById("speed").value)
-      );
-      // setTimeout(animate, speed);
-      // requestAnimationFrame(animate);
+      let speed = Math.floor(1000 / Number(document.getElementById("speed").value));
 
       this.drawCanvas();
 
@@ -113,14 +109,9 @@ class SortingVisualizer {
         return;
       } else {
         setTimeout(animate, speed);
-
-        // console.log(this.array);
-        sortArray.next();
+        sortArray.next(); // call next iteration of the bubbleSort function
       }
-      // console.log(this.isSorted(this.array))
-      // sortArray.next() // call next iteration of the bubbleSort function
     };
-
     animate();
   }
 
@@ -241,10 +232,36 @@ document.getElementById('sort').onclick = e => {
 }
 
 document.getElementById('reset').onclick = e => {
-  visualizer.init();
+  // visualizer.init();
+  e.preventDefault();
+  location.reload();
 }
 
 let sizeInput = document.getElementById("size")
 sizeInput.addEventListener("input", function() {
   visualizer.resize();
 });
+
+document.getElementById("algorithm").onchange = function () {
+  sessionStorage.setItem("algorithm", document.getElementById("algorithm").value);
+};
+
+if (sessionStorage.getItem("algorithm")) {
+  document.getElementById("algorithm").options[sessionStorage.getItem("algorithm")].selected = true;
+}
+
+document.getElementById("size").onchange = function () {
+  sessionStorage.setItem("size", document.getElementById("size").value);
+};
+
+if (sessionStorage.getItem("size")) {
+  document.getElementById("size").value = sessionStorage.getItem("size");
+}
+
+document.getElementById("speed").onchange = function () {
+  sessionStorage.setItem("speed", document.getElementById("speed").value);
+};
+
+if (sessionStorage.getItem("speed")) {
+  document.getElementById("speed").value = sessionStorage.getItem("speed");
+}

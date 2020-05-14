@@ -26,23 +26,22 @@
         <option value="Sorting">Sorting</option>
       </select>
       
-      <select id="algorithm">
-        <!-- <option value="" disabled selected>Select Algorithm</option> -->
-        <option value="Bubble Sort">Bubble Sort</option>
+      <select name="algorithm"id="algorithm">
+        <option value="0" disabled selected>Select Algorithm</option>
+        <option value="1">Bubble Sort</option>
         <!-- <option value="Merge Sort">Merge Sort</option> -->
-        <option value="Quick Sort">Quick Sort</option>
-        <!-- <option value="Insertion Sort">Insertion Sort</option> -->
-        <!-- <option value="Selection Sort">Selection Sort</option> -->
+        <option value="2">Quick Sort</option>
+
       </select>
       
       <div class="options-size-container">
         <h4>Size</h4>
-        <input id='size'type="range" min="10" max="100" value="50">
+        <input id='size'type="range" min="10" max="75" value="42">
       </div>
       
       <div class="options-speed-container">
         <h4>Speed</h4>
-        <input id='speed' type="range" min='15' max='100' value='37'>
+        <input id='speed' type="range" min='15' max='100' value='57'>
       </div>
       
       <button id='sort'>Sort</button>
