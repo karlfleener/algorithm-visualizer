@@ -41,7 +41,8 @@ Day 4 - Style the frontend, making it polished and professional.
 
 Day 5 - 
 
-## Bonus/Future
+## Future
 * Continue adding sorting algorithms
+* Add Errors
 * Add pathfinding algorithms
 * Increase amount of ways to visualize
