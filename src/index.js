@@ -250,15 +250,17 @@ if (sessionStorage.getItem("algorithm")) {
   document.getElementById("algorithm").options[sessionStorage.getItem("algorithm")].selected = true;
 }
 
-document.getElementById("size").onchange = function () {
+document.getElementById("size").oninput = function () {
+  debugger
   sessionStorage.setItem("size", document.getElementById("size").value);
 };
 
 if (sessionStorage.getItem("size")) {
+  debugger
   document.getElementById("size").value = sessionStorage.getItem("size");
 }
 
-document.getElementById("speed").onchange = function () {
+document.getElementById("speed").oninput = function () {
   sessionStorage.setItem("speed", document.getElementById("speed").value);
 };
 
