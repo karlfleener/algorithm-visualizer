@@ -41,13 +41,8 @@ Not sure how a certain algorithm works? Select the algorithm from the dropdown m
   <img width="100%" src="/src/images/algo-demo.gif" alt="demo gif">
 </div>
 
-## Wireframes
-
-![](./src/images/algorithm-visualizer.png)
-
-
 ## Future
 * Continue adding sorting algorithms
-* Add Errors
+* Add error Messages
 * Add pathfinding algorithms
 * Increase amount of ways to visualize
