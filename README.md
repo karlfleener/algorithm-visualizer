@@ -38,7 +38,7 @@ Not sure how a certain algorithm works? Select the algorithm from the dropdown m
 * Users can reset/randomize elements
 
 <div>
-  <img width="50%" src="/src/images/algo-demo.gif" alt="demo gif">
+  <img width="75%" src="/src/images/algo-demo.gif" alt="demo gif">
 </div>
 
 ## Wireframes
