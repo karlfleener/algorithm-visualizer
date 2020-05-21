@@ -23,49 +23,51 @@
     <h1 class='main-header'>Algorithm Visualizer</h1>
   </header>
   
-  <div class="content-container">
-    
-    <div class="options-container">
+  <div class="main-container">
+    <div class="content-container">
       
-      <select id="algorithm-type">
-        <!-- <option value="" disabled selected>Algorithm Type</option> -->
-        <option value="Sorting">Sorting</option>
-      </select>
-      
-      <select name="algorithm"id="algorithm">
-        <option value="0" disabled selected>Select Algorithm</option>
-        <option value="1">Bubble Sort</option>
-        <!-- <option value="Merge Sort">Merge Sort</option> -->
-        <option value="2">Quick Sort</option>
-
-      </select>
-      
-      <div class="options-size-container">
-        <h4>Size</h4>
-        <input id='size'type="range" min="10" max="75" value="42">
+      <div class="options-container">
+        
+        <select id="algorithm-type">
+          <!-- <option value="" disabled selected>Algorithm Type</option> -->
+          <option value="Sorting">Sorting</option>
+        </select>
+        
+        <select name="algorithm"id="algorithm">
+          <option value="0" disabled selected>Select Algorithm</option>
+          <option value="1">Bubble Sort</option>
+          <!-- <option value="Merge Sort">Merge Sort</option> -->
+          <option value="2">Quick Sort</option>
+  
+        </select>
+        
+        <div class="options-size-container">
+          <h4>Size</h4>
+          <input id='size'type="range" min="10" max="75" value="42">
+        </div>
+        
+        <div class="options-speed-container">
+          <h4>Speed</h4>
+          <input id='speed' type="range" min='5' max='100' value='52'>
+        </div>
+        
+        <button id='sort'>Sort</button>
+        
+        <button id='reset'>Reset</button>
+  
       </div>
       
-      <div class="options-speed-container">
-        <h4>Speed</h4>
-        <input id='speed' type="range" min='5' max='100' value='52'>
+      <div class="visualizer-container">
+        <canvas id="canvas" width="656" height="476">
+          Your browser does not support canvas
+        </canvas>
       </div>
-      
-      <button id='sort'>Sort</button>
-      
-      <button id='reset'>Reset</button>
-
+  
     </div>
     
-    <div class="visualizer-container">
-      <canvas id="canvas" width="656" height="476">
-        Your browser does not support canvas
-      </canvas>
-    </div>
-
+    <span class='byline'>By: Karl Fleener</span>
   </div>
   
-  <div class='byline'>By: Karl Fleener</div>
-
   <footer class='main-footer-container'>
     <a href="https://www.linkedin.com/in/karlfleener/" target="_blank">LinkedIn</a>
     <a href="https://angel.co/u/karlfleener" target="_blank">AngelList</a>
