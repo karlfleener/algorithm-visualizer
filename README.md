@@ -1,45 +1,50 @@
-## Overview
+## Algorithm Visualizer
 
-The Algorithm Visualizer allows users to see how different algorithms 
-work under the hood.
+The Algorithm Visualizer is a tool that allows users to visualize how algorithms work under the hood.
 
-## Instructions 
+Live: https://karlfleener.github.io/algorithm-visualizer/
 
-Select the type of algorithm from the dropdown menu, set the size of the graph and speed to visualize. Once all the these are set click the Sort button and watch the algorithm come to life. 
-Click the Reset button to generate a newly randomized graph.
+## Table of Contents
 
-Demo
+- [Background and Overview](#background-and-overview)
+- [Technologies](#Technologies)
+- [Features](#features)
+  * [Algorithms](#Algorithms)
+  * [Dashboard](#dashboard)
+  * [Media Content](#media-content)
+  * [Favorites](#favorites)
+- [Code Highlights](#code-highlights)
+  *  [Rendering media](#rendering-media)
+  *  [Favoriting and unfavoriting](#favoriting-and-unfavoriting)
+- [The Team](#the-team)
 
-https://karlfleener.github.io/algorithm-visualizer/
+## Background/Overview
 
-## Functionality and MVP
+Not sure how a certain algorithm works? Select the algorithm from the dropdown menu and click sort to see the selected algorithm come to life! If you want to visualize a greater amount of elements being sorted, or watch at a different speed, simply adjust the sliders accordingly and the changes take effect in realtime. If at any time you want to see a newly randomized collection of elements click the reset button.
+
+## Technologies
+
+- JavaScript
+- HTML5
+- Sass
+- Canvas for animations
+- Git for version control
+
+## Features
 
 * Users can choose from a selection of sorting algorithms to visualize
 * Users can increase/decrease amount of elements to sort
 * Users can increase/decrease the sorting time
-* Users can Reset/Randomize elements
+* Users can reset/randomize elements
+
+<div>
+  <img width="50%" src="/src/images/algo-demo.gif" alt="demo gif">
+</div>
 
 ## Wireframes
 
 ![](./src/images/algorithm-visualizer.png)
 
-## Architecture and Technologies
-
-* JavaScript for algorithm logic
-* Canvas for graphs and animation
-* Browserify to bundle js files
-
-## Timeline
-
-Day 1 - Setup all necessary Node modules and getting webpack up and running. Create basic entry file and begin to write the logic for each algorithm.
-
-Day 2 - Finish algorithm logic and implement styling/animation logic. Begin adding functionality for # of elements and speed sliding scales.
-
-Day 3 - Learn Canvas and finish adding animations.
-
-Day 4 - Style the frontend, making it polished and professional.
-
-Day 5 - 
 
 ## Future
 * Continue adding sorting algorithms
