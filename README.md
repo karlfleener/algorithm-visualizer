@@ -10,6 +10,7 @@ Live: https://karlfleener.github.io/algorithm-visualizer/
 - [Technologies](#Technologies)
 - [Features](#features)
 - [Code Highlights](#code-highlights)
+- [Future Plans](#future-plans)
 
 ## Background/Overview
 
@@ -83,7 +84,7 @@ Not sure how a certain algorithm works? Select the algorithm from the dropdown m
   }
 ```
 
-## Future
+## Future Plans
 
 * Continue adding sorting algorithms
 * Add error Messages
