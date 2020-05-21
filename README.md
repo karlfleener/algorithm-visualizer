@@ -16,7 +16,6 @@ Live: https://karlfleener.github.io/algorithm-visualizer/
 - [Code Highlights](#code-highlights)
   *  [Rendering media](#rendering-media)
   *  [Favoriting and unfavoriting](#favoriting-and-unfavoriting)
-- [The Team](#the-team)
 
 ## Background/Overview
 
@@ -41,7 +40,57 @@ Not sure how a certain algorithm works? Select the algorithm from the dropdown m
   <img width="100%" src="/src/images/algo-demo.gif" alt="demo gif">
 </div>
 
+## Code Highlights
+
+- Used generator functions for asynchronous programming. The algorithm pauses once it yields and only continues once when the next iteration is called upon.
+
+```JavaScript
+  *bubbleSort(arr) {
+    let swapped = true;
+    while (swapped) {
+      swapped = false;
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+          this.swap(arr, i, i + 1);
+          swapped = true;
+          yield swapped; // pause here
+        }
+      }
+    }
+    return;
+  }
+
+  swap(arr, idx1, idx2) {
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+  }
+```
+- This allows Canvas to render each iterative loop in the sorting algorithm, and call for the next loop after.
+
+```JavaScript
+  sort() {
+    
+    let sortArray = this.algorithm();
+    if (sortArray === undefined) return;
+    const animate = () => {
+      let speed = Math.floor(1000 / Number(document.getElementById("speed").value));
+
+      this.drawCanvas();
+
+      if (this.isSorted(this.array)) {
+        return;
+      } else {
+        setTimeout(animate, speed);
+        sortArray.next(); // call next iteration of the bubbleSort function
+      }
+    };
+    animate();
+  }
+```
+
 ## Future
+
 * Continue adding sorting algorithms
 * Add error Messages
 * Add pathfinding algorithms
