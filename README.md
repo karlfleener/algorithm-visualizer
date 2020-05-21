@@ -9,13 +9,7 @@ Live: https://karlfleener.github.io/algorithm-visualizer/
 - [Background and Overview](#background-and-overview)
 - [Technologies](#Technologies)
 - [Features](#features)
-  * [Algorithms](#Algorithms)
-  * [Dashboard](#dashboard)
-  * [Media Content](#media-content)
-  * [Favorites](#favorites)
 - [Code Highlights](#code-highlights)
-  *  [Rendering media](#rendering-media)
-  *  [Favoriting and unfavoriting](#favoriting-and-unfavoriting)
 
 ## Background/Overview
 
