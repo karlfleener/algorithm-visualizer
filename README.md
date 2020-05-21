@@ -14,7 +14,7 @@ Live: https://karlfleener.github.io/algorithm-visualizer/
 
 ## Background/Overview
 
-Not sure how a certain algorithm works? Select the algorithm from the dropdown menu and click sort to see the selected algorithm come to life! If you want to visualize a greater amount of elements being sorted, or watch at a different speed, simply adjust the sliders accordingly and the changes take effect in realtime. If at any time you want to see a newly randomized collection of elements click the reset button.
+Not sure how a certain algorithm works? Select the algorithm from the dropdown menu and click sort to see the selected algorithm come to life! If you want to visualize a greater amount of elements being sorted or watch at a different speed, simply adjust the sliders accordingly and the changes take effect in realtime. If at any time you want to see a newly randomized collection of elements click the reset button.
 
 ## Technologies
 
