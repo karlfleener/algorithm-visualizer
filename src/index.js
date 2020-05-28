@@ -62,6 +62,19 @@ class SortingVisualizer {
     return "hsl(" + colorNext + ",90%,50%)";
   }
 
+  // if algorithm is running disable the input fields
+  toggleInputs(){
+    if (!this.isSorted(this.array)) {
+      document.getElementById("algorithm-type").disabled = true;
+      document.getElementById("algorithm").disabled = true;
+      document.getElementById("size").disabled = true;
+    } else {
+      document.getElementById("algorithm-type").disabled = false;
+      document.getElementById("algorithm").disabled = false;
+      document.getElementById("size").disabled = false;
+    }
+  }
+
   init() {
     this.colorStart = Math.floor(Math.random() * 360);
     this.buildArray();
@@ -103,20 +116,24 @@ class SortingVisualizer {
     
     let sortArray = this.algorithm();
     if (sortArray === undefined) return;
+
     const animate = () => {
       let speed = Math.floor(1000 / Number(document.getElementById("speed").value));
 
       this.drawCanvas();
 
       if (this.isSorted(this.array)) {
+        this.toggleInputs()
         return;
       } else {
+        this.toggleInputs();
         setTimeout(animate, speed);
         sortArray.next(); // call next iteration of the bubbleSort function
       }
     };
     animate();
   }
+
 
   //---------------------------------Algorithms-----------------------------------
 
