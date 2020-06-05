@@ -28,7 +28,7 @@ Not sure how a certain algorithm works? Select the algorithm from the dropdown m
 
 * Users can choose from a selection of sorting algorithms to visualize
 * Users can increase/decrease amount of elements to sort
-* Users can increase/decrease the sorting time
+* Users can increase/decrease the sorting speed
 * Users can reset/randomize elements
 
 <div>

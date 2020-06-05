@@ -123,7 +123,7 @@ class SortingVisualizer {
       this.drawCanvas();
 
       if (this.isSorted(this.array)) {
-        this.toggleInputs()
+        this.toggleInputs();
         return;
       } else {
         this.toggleInputs();
